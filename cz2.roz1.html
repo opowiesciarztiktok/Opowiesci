@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła Magii X – Część 2, Rozdział 1</title>
+    <style>
+        /* --- Mroczna Baza i Efekt Mgły --- */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: #05000a;
+            color: #d0d0d0;
+            line-height: 1.8;
+            padding: 0;
+            overflow-x: hidden;
+            /* Efekt pulsującego mroku na krawędziach */
+            animation: shadowVision 8s infinite ease-in-out;
+        }
+
+        @keyframes shadowVision {
+            0%, 100% { box-shadow: inset 0 0 50px #000; }
+            50% { box-shadow: inset 0 0 150px #1a0033; }
+        }
+
+        /* Pasek postępu magii cienia */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #2a0044, #8a00ff, #000);
+            width: 0%;
+            z-index: 1000;
+            box-shadow: 0 0 15px #8a00ff;
+        }
+
+        /* --- Nagłówek --- */
+        header {
+            padding: 60px 20px 20px;
+            font-size: clamp(22px, 6vw, 38px);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 20px #8a00ff;
+        }
+
+        .shadow-meter {
+            font-size: 14px;
+            color: #8a00ff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        /* --- Kontener Opowieści --- */
+        .story-wrapper {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 40px;
+            background: rgba(10, 0, 20, 0.85);
+            border: 1px solid rgba(138, 0, 255, 0.2);
+            border-radius: 0 50px 0 50px; /* Asymetryczny, magiczny kształt */
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        /* Inicjał przechodzący w mrok */
+        .content p:first-of-type::first-letter {
+            float: left;
+            font-size: 85px;
+            line-height: 70px;
+            padding-right: 12px;
+            color: #000;
+            text-shadow: 0 0 10px #8a00ff, 2px 2px #fff;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .content {
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        /* Efekt snu we mgle */
+        .dream-sequence {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 2px solid #8a00ff;
+            border-right: 2px solid #8a00ff;
+            font-style: italic;
+            color: #b0a0c0;
+            animation: fogEffect 4s infinite alternate;
+        }
+
+        @keyframes fogEffect {
+            from { opacity: 0.7; filter: blur(1px); }
+            to { opacity: 1; filter: blur(0px); }
+        }
+
+        /* --- Dialogi --- */
+        .dialog-box {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(138, 0, 255, 0.05);
+            border: 1px dashed rgba(138, 0, 255, 0.3);
+        }
+
+        .character-name {
+            font-weight: bold;
+            color: #ff0055;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        /* --- Nawigacja --- */
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #8a00ff;
+            padding: 12px 25px;
+            border-radius: 4px;
+            background: rgba(138, 0, 255, 0.1);
+            transition: 0.4s;
+        }
+
+        .btn:hover {
+            background: #8a00ff;
+            box-shadow: 0 0 20px #8a00ff;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .back-home a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .story-wrapper { padding: 25px; border-radius: 0 20px 0 20px; }
+            .content { font-size: 18px; }
+        }
+    </style>
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<header>Część 2: Rozdział 1</header>
+
+<div class="story-wrapper">
+    <div class="content">
+        <p>Po powrocie do dormitorium Madison próbowała znaleźć spokój, ale znak na ramieniu zdawał się pulsować z własnym rytmem, jakby oddychał. Zasnęła, ale sen nie przyniósł ukojenia.</p>
+
+        <div class="dream-sequence">
+            Znalazła się w ciemnym lesie, gdzie mgła oplatała drzewa, a cienie poruszały się tuż poza zasięgiem wzroku. Wśród nich pojawiła się ta sama dziewczyna, którą spotkała wcześniej – z oczami pustymi jak mleko i twarzą, która falowała niczym czarny dym.
+        </div>
+
+        <p>Chciała krzyczeć, ale głos uwiązł jej w gardle. Poczuła piekący ból na ramieniu, gdzie znak zaczynał się rozświetlać, a jej oczy powoli ciemniały na krawędziach. Przebudziła się gwałtownie, a na jej czole pojawił się zimny pot.</p>
+
+        <p>Kolejne noce nie były lepsze. Znak na ramieniu pulsował mocniej, a ciemność w jej oczach zajmowała coraz większą przestrzeń. Czasami, gdy była zmęczona lub zestresowana, traciła kontrolę – robiła rzeczy, których potem nie potrafiła sobie przypomnieć. Jej głos stawał się wtedy chłodny, a spojrzenie całkowicie czarne, jak bezdenna otchłań.</p>
+
+        <p>Pewnego popołudnia Nino zauważył, że coś jest nie tak.</p>
+
+        <div class="dialog-box">
+            <span class="character-name">Nino:</span>
+            – Madison, co się z tobą dzieje?
+        </div>
+
+        <div class="dialog-box">
+            <span class="character-name">Madison:</span>
+            – Nie wiem – odparła cicho, zasłaniając rękę pod długim rękawem. – To jakby coś mnie powoli pożerało od środka.
+        </div>
+
+        <p>Profesor Vael spojrzał na jej ramię z niepokojem podczas lekcji iluzji.</p>
+
+        <div class="dialog-box">
+            <span class="character-name">Profesor Vael:</span>
+            – To nie jest zwykła klątwa. To pradawna magia cienia. Jeśli tego nie zatrzymamy, Madison może stracić nad sobą kontrolę całkowicie.
+        </div>
+
+        <p>Madison czuła, że z każdym dniem walka staje się trudniejsza. Znak przejmował nad nią coraz więcej – choć na razie tylko ułamek jej woli, ledwie jedną dwudziestą siódmą część. Mimo to pojawiał się bez ostrzeżenia, zaciemniając jej myśli.</p>
+
+        <p>W sercu miała tylko jedno pytanie: <strong>Jak powstrzymać coś, co zdążyło się już w niej zakorzenić?</strong></p>
+    </div>
+</div>
+
+<div class="nav-links">
+    <a href="cz2.roz2.html" class="btn">Następny →</a>
+</div>
+
+<div class="back-to-list">
+    <a href="szkola-magii-x.html">Powrót do Spisu Rozdziałów</a>
+</div>
+
+<script>
+    window.onscroll = function() {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>

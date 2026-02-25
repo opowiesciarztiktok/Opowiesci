@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła Magii X – Rozdział 4</title>
+    <style>
+        /* --- Mroczna Baza --- */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: radial-gradient(circle at center, #0f001a 0%, #000000 100%);
+            color: #d0d0d0;
+            line-height: 1.8;
+            padding: 0;
+            animation: darkPulse 10s infinite alternate;
+        }
+
+        @keyframes darkPulse {
+            0% { background-color: #000; }
+            100% { background-color: #120022; }
+        }
+
+        /* Pasek postępu (Mroczna Magia) */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #4b0082, #000000, #8a00ff);
+            width: 0%;
+            z-index: 1000;
+            box-shadow: 0 0 15px #4b0082;
+        }
+
+        /* --- Nagłówek --- */
+        header {
+            padding: 70px 20px 40px;
+            font-size: clamp(26px, 7vw, 45px);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 20px #8a00ff, 0 0 40px #000;
+        }
+
+        /* --- Kontener Opowieści --- */
+        .story-wrapper {
+            max-width: 850px;
+            margin: 0 auto 60px;
+            padding: 40px;
+            background: rgba(10, 0, 20, 0.8);
+            border: 1px solid rgba(138, 0, 255, 0.2);
+            border-radius: 30px;
+            box-shadow: 0 0 60px rgba(0, 0, 0, 1);
+            backdrop-filter: blur(15px);
+            position: relative;
+        }
+
+        /* Ozdobny inicjał */
+        .content p:first-of-type::first-letter {
+            float: left;
+            font-size: 80px;
+            line-height: 70px;
+            padding-right: 15px;
+            color: #8a00ff;
+            text-shadow: 3px 3px 0px #000;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .content {
+            font-size: 21px;
+            text-align: justify;
+        }
+
+        /* --- Efekt Uderzenia (Ból) --- */
+        .magic-hit {
+            background: rgba(75, 0, 130, 0.2);
+            border: 2px solid #4b0082;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 15px;
+            color: #fff;
+            text-shadow: 0 0 10px #8a00ff;
+            animation: flash 0.5s ease-out;
+        }
+
+        @keyframes flash {
+            0% { background: #fff; }
+            100% { background: rgba(75, 0, 130, 0.2); }
+        }
+
+        /* --- Mroczny Symbol --- */
+        .dark-symbol {
+            display: block;
+            margin: 30px auto;
+            padding: 25px;
+            background: #000;
+            border: 1px solid #4b0082;
+            border-radius: 50%;
+            width: fit-content;
+            text-align: center;
+            box-shadow: 0 0 30px #4b0082;
+            animation: symbolGlow 2s infinite ease-in-out;
+        }
+
+        @keyframes symbolGlow {
+            0%, 100% { box-shadow: 0 0 20px #4b0082; transform: scale(1); }
+            50% { box-shadow: 0 0 40px #8a00ff; transform: scale(1.05); }
+        }
+
+        .symbol-description {
+            font-weight: bold;
+            color: #9933ff;
+            font-style: italic;
+        }
+
+        /* --- Dialog Zaryi --- */
+        .dialog {
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 3px solid #ff0055;
+            color: #ffd6f0;
+        }
+
+        /* --- Nawigacja --- */
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            max-width: 850px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: #8a00ff;
+            border: 2px solid #8a00ff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            background: rgba(138, 0, 255, 0.1);
+        }
+
+        .btn:hover {
+            background: #8a00ff;
+            color: #fff;
+            box-shadow: 0 0 20px #8a00ff;
+        }
+
+        .back-home {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .back-home a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* Responsywność */
+        @media (max-width: 600px) {
+            .story-wrapper { padding: 20px; margin: 10px; }
+            .content { font-size: 19px; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<header>👁️ Rozdział 4: Mroczny Znak 👁️</header>
+
+<div class="story-wrapper">
+    <div class="content">
+        <p>Po śniadaniu Madison postanowiła pozwiedzać resztę zamku. Korytarze Szkoły Magii X skręcały pod dziwnymi kątami, jakby ściany same decydowały, gdzie mogą iść uczniowie. Zegar przy wejściu do biblioteki szeptał złowieszcze przestrogi, a portrety śledziły ją wzrokiem z niepokojącą uwagą.</p>
+
+        <p>Była sama. I właśnie wtedy to usłyszała. Cichy trzask. Jakby ktoś nieostrożnie zamknął szkatułkę.</p>
+
+        <p>Madison skręciła w wąski korytarz prowadzący do sali z zabezpieczonymi artefaktami. Drzwi do niej powinny być zamknięte, ale… teraz stały uchylone. Za nimi migotały niepokojące błyski fioletowego światła. Wślizgnęła się cicho do środka.</p>
+
+        <p>W blasku runicznych lamp dostrzegła dziewczynę w szacie uczniowskiej, pochyloną nad otwartą skrzynią. Jej dłonie drżały, a z pleców zwisały zerwane pieczęcie ochronne. Jej oczy… nie były normalne. Mleczne. Puste. Jakby coś z wewnątrz patrzyło przez nią.</p>
+
+        <div class="dialog">– Hej! Co ty robisz?! – zawołała Madison, podchodząc bliżej.</div>
+
+        <p>Dziewczyna drgnęła, jakby wyrwana z transu. Ale wtedy spojrala prosto na nią i uśmiechnęła się. To nie był ludzki uśmiech.</p>
+
+        <div class="magic-hit">
+            Z jej dłoni wystrzelił czarny pocisk. Madison próbowała uskoczyć, ale magia trafiła ją w ramię. Krzyknęła. Ból był jak ogień, ale nie taki fizyczny – coś wbijało się głębiej, w duszę. Upadła na kolano, dysząc ciężko.
+        </div>
+
+        <p>Coś szeptało jej w głowie. Obietnice. Kłamstwa. Moc. Ale Madison się nie poddała. Zacisnęła zęby, wstała i podniosła najbliższy artefakt – migoczącą laskę runiczną. Uderzyła nią w podłogę, wywołując falę odrzutu, która powaliła opętaną uczennicę na ziemię.</p>
+
+        <p>Na jej ramieniu, tam gdzie uderzyło zaklęcie, zaczął pojawiać się znak.</p>
+
+        <div class="dark-symbol">
+            <span class="symbol-description">Mroczny symbol: oko, wijące się węże i pęknięta korona.</span>
+        </div>
+
+        <p>Znak pulsował ciemnofioletowym światłem, a skóra wokół niego zaczęła delikatnie czernieć. Drzwi otworzyły się gwałtownie – do środka wbiegła profesorka Zarya z błyskawicą już na dłoni.</p>
+
+        <div class="dialog">
+            – Madison?! Co tu się dzieje?!<br><br>
+            – Była… opętana. Ukradła artefakty. Ale… co ś mnie… trafiło.
+        </div>
+
+        <p>Zarya spojrzała na znak i jej twarz pobladła. <em>– O nie… –</em> wyszeptała. <em>– To niemożliwe…</em></p>
+
+        <p>Ale nie dokończyła. Bo znak na ramieniu Madison właśnie rozbłysnął – delikatnie, złowieszczo. I coś w niej… poruszyło się.</p>
+    </div>
+</div>
+
+<div class="nav-links">
+    <a href="cz1.roz3.html" class="btn">← Poprzedni</a>
+</div>
+
+<div class="back-to-list">
+    <a href="szkola-magii-x.html">Powrót do Spisu Rozdziałów</a>
+</div>
+
+<script>
+    window.onscroll = function() {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Opowieściarz</title>
+<style>
+/* --- Podstawy --- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0e0e0e;
+    color: white;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Nagłówek --- */
+header {
+    background: #1a1a1a;
+    padding: 25px;
+    font-size: 34px;
+    font-weight: bold;
+    animation: headerWave 3s infinite ease-in-out;
+    transform-origin: center;
+    border-bottom: 2px solid #3a0066;
+}
+
+@keyframes headerWave {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(3px) rotate(-0.5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* --- Główna sekcja --- */
+main {
+    margin-top: 50px;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* --- Kontener przycisków --- */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- Przyciski --- */
+.button {
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* --- NOWY MAGICZNY STYL (Szkoła Magii) --- */
+.button.magic {
+    background: linear-gradient(135deg, #2b0044 0%, #8a00ff 100%);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid #ff0055;
+    box-shadow: 0 0 15px rgba(138, 0, 255, 0.4);
+    animation: magicPulse 2s infinite;
+}
+
+.button.magic:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 0 25px #ff0055, 0 0 45px #8a00ff;
+    border-color: #ffffff;
+}
+
+@keyframes magicPulse {
+    0% { box-shadow: 0 0 10px rgba(138, 0, 255, 0.4); }
+    50% { box-shadow: 0 0 20px rgba(255, 0, 85, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(138, 0, 255, 0.4); }
+}
+
+/* --- Pozostałe przyciski --- */
+.button.brawl {
+    background: linear-gradient(135deg,#ffb300,#ff0055);
+    color: white;
+}
+
+.button.hacker {
+    background: linear-gradient(135deg,#00ffcc,#006666);
+    color: white;
+}
+
+/* --- Nieaktywne --- */
+.button.disabled {
+    background: #333;
+    pointer-events: none;
+    opacity: 0.5;
+    border: none;
+}
+
+.button.disabled::after {
+    content: "Wkrótce...";
+    font-size: 10px;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    color: #aaa;
+}
+
+/* --- Responsywność --- */
+@media (max-width:420px){
+    header { font-size: 30px; }
+    .button { padding: 15px; font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>Opowieściarz</header>
+
+<main>
+    <div class="subtitle">Wybierz opowieść:</div>
+
+    <div class="buttons">
+        <a class="button magic" href="szkola-magii-x.html">✨ Szkoła Magii X ✨</a>
+        
+        <a class="button brawl disabled" href="#">Życie zadymiarzy Brawl Stars</a>
+        <a class="button hacker disabled" href="#">Hakerzy</a>
+    </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła Magii X – Rozdział 1</title>
+    <style>
+        /* --- Baza i Tło --- */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif; /* Bardziej książkowa czcionka */
+            background: radial-gradient(circle at top, #1a0033 0%, #05000a 100%);
+            color: #e0e0e0;
+            line-height: 1.8;
+            padding: 0;
+        }
+
+        /* Pasek postępu czytania */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff0055, #8a00ff);
+            width: 0%;
+            z-index: 1000;
+            box-shadow: 0 0 10px #ff0055;
+        }
+
+        /* --- Magiczny Nagłówek --- */
+        header {
+            padding: 60px 20px 30px;
+            font-size: clamp(24px, 6vw, 40px);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: center;
+            text-shadow: 0 0 15px #ff0055;
+            color: white;
+        }
+
+        /* --- Kontener Treści --- */
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(138, 0, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        /* Inicjał (Ozdobna pierwsza litera) */
+        .content p:first-of-type::first-letter {
+            float: left;
+            font-size: 75px;
+            line-height: 60px;
+            padding-top: 4px;
+            padding-right: 12px;
+            padding-left: 3px;
+            font-family: 'Times New Roman', serif;
+            color: #ff0055;
+            text-shadow: 2px 2px 0px #8a00ff;
+        }
+
+        .content {
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        /* --- List Dylana --- */
+        .letter {
+            margin: 40px auto;
+            padding: 30px;
+            max-width: 85%;
+            background: rgba(240, 230, 255, 0.05);
+            border-left: 4px solid #ff0055;
+            border-radius: 4px;
+            font-style: italic;
+            color: #d1b3ff;
+            box-shadow: inset 0 0 20px rgba(138, 0, 255, 0.1);
+            position: relative;
+        }
+
+        .letter::before {
+            content: "✉";
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 30px;
+            color: #ff0055;
+        }
+
+        /* --- Nawigacja --- */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            color: white;
+            background: rgba(138, 0, 255, 0.2);
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: 1px solid #8a00ff;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .nav-btn:hover {
+            background: #ff0055;
+            box-shadow: 0 0 15px #ff0055;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn.disabled {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        /* --- Stopka --- */
+        .back-to-list {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .back-to-list a {
+            color: #8a00ff;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px dashed #8a00ff;
+        }
+
+        /* --- RWD --- */
+        @media (max-width: 600px) {
+            .story-container { padding: 20px; margin: 10px; }
+            .content { font-size: 18px; }
+        }
+    </style>
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<header>Szkoła Magii X – Rozdział 1</header>
+
+<div class="story-container">
+    <div class="content">
+        <p>Madison siedziała na parapecie swojego pokoju, trzymając w rękach lekko pomiętą kopertę. Na odwrocie widniał znajomy charakter pisma – Dylan. Jej chłopak. Z bijącym sercem otworzyła list:</p>
+        
+        <div class="letter">
+            <p>„Madison, przepraszam... Muszę wyjechać. To sprawa rodzinna, bardzo nagła. Nie wiem, kiedy wrócę. Uważaj na siebie i... pamiętaj, że zawsze będę Cię kochał.”</p>
+        </div>
+
+        <p>Madison poczuła, jak coś ściska ją w gardle. Nie było go już od kilku dni, ale dopiero teraz dotarło do niej, że została całkiem sama. Nikogo bliskiego w tym pustym, szarym świecie.</p>
+
+        <p>Z zamyślenia wyrwał ją dziwny dźwięk – coś jak szelest magii pomieszany z dźwiękiem odkręcanego zaworu. Obróciła głowę i zobaczyła... portal. Błękitna, wirująca spirala zawieszona w powietrzu pośrodku pokoju.</p>
+
+        <p>Z wnętrza portalu dobiegł miękki, ciepły głos:<br>
+        <em>„Madison Everlyn... jesteś wybrana. Czas, byś przekroczyła próg Szkoły Magii X”</em></p>
+
+        <p>Zanim zdążyła pomyśleć, czy to sen, czy może kompletny odlot, jej ciało poruszyło się samo. Zrobiła krok... i wpadła do środka.</p>
+    </div>
+</div>
+
+<div class="navigation">
+    <a href="#" class="nav-btn disabled">← Poprzedni</a>
+    <a href="cz1.roz2.html" class="nav-btn">Następny →</a>
+</div>
+
+<div class="back-to-list">
+    <a href="szkola-magii-x.html">Powrót do Spisu Rozdziałów</a>
+</div>
+
+<script>
+    // Obsługa paska postępu
+    window.onscroll = function() {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła Magii X – Część 2, Rozdział 5</title>
+    <style>
+        /* --- Mroczna Wieża i Puszcza --- */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: #050505;
+            color: #e0e0e0;
+            line-height: 1.8;
+            overflow-x: hidden;
+            transition: background 0.5s;
+        }
+
+        /* Efekt dymu czarno-złotego */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, transparent, rgba(255, 215, 0, 0.05), #000);
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        header {
+            padding: 60px 20px 10px;
+            font-size: clamp(22px, 6vw, 38px);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-align: center;
+            color: #ffd700;
+            text-shadow: 0 0 20px #8a00ff;
+        }
+
+        .story-wrapper {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 40px;
+            background: rgba(10, 10, 15, 0.9);
+            border: 1px solid #ffd70044;
+            box-shadow: 0 0 40px #000;
+            position: relative;
+            z-index: 20;
+        }
+
+        /* Mechanizm Klik */
+        .trap-trigger {
+            background: #1a0000;
+            color: #ff4444;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            border: 1px dashed #ff4444;
+            margin: 20px 0;
+            letter-spacing: 5px;
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        /* Zaklęcie Likwiduj */
+        .spell-cast {
+            background: #fff;
+            color: #000;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 0 50px #fff;
+            animation: flash 1.5s forwards;
+        }
+
+        @keyframes flash {
+            0% { opacity: 0; transform: scale(0.8); }
+            10% { opacity: 1; transform: scale(1.1); }
+            100% { opacity: 1; transform: scale(1); background: #8a00ff; color: #fff; box-shadow: 0 0 20px #8a00ff; }
+        }
+
+        /* Lista Składników - Aktualizacja */
+        .todo-list {
+            background: rgba(0, 0, 0, 0.8);
+            border-left: 4px solid #ffd700;
+            padding: 20px;
+            margin-top: 40px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .done { color: #55ff55; text-decoration: line-through; }
+        .pending { color: #ffd700; font-weight: bold; }
+
+        /* Nawigacja */
+        .nav-links { text-align: center; margin-bottom: 50px; position: relative; z-index: 30; }
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #ffd700;
+            padding: 12px 25px;
+            background: rgba(255, 215, 0, 0.1);
+            transition: 0.4s;
+            margin: 10px;
+        }
+        .btn:hover { background: #ffd700; color: #000; box-shadow: 0 0 20px #ffd700; }
+
+    </style>
+</head>
+<body>
+
+<header>Część 2: Rozdział 5</header>
+
+<div class="story-wrapper">
+    <div class="content">
+        <p>Madison przedzierała się przez gęste ostępy puszczy Azarkhan, aż jej oczom ukazała się polana. Na samym jej środku wyrastała ciemna wieża – <b>Vergangenheitssturm</b>, Wieża Przeszłości.</p>
+        
+        <p>Powoli pchnęła ciężkie wrota. Parter budynku sprawiał wrażenie niepokojąco zwyczajnego. Zrobiła zaledwie dwa kroki, gdy ciszę przeciął głośny dźwięk:</p>
+
+        <div class="trap-trigger">KLIK.</div>
+
+        <p>Nadepnęła na fragment posadzki. Ze ścian zaczął wydobywać się czarno-złoty dym, a posągi strażników ożyły. Ich puste ślepia rozbłysły złotem. Madison dostrzegła na nich symbol: <b>V</b>.</p>
+
+        <p>— To symbol Magii V… te posągi są nią zasilane! — zauważyła błyskawicznie. Nerwowo zaczęła wertować księgę. Zaklęcie unieruchamiające? Za wolne. W końcu znalazła właściwą stronę.</p>
+
+        <div class="spell-cast">„LIKWIDUJ X LUB V!”</div>
+
+        <p>Potężna fala uderzeniowa neutralizowała wszelką obcą magię w promieniu pięciu kilometrów. Wszystko znieruchomiało i runęło na ziemię. W grobowej ciszy rozległ się pełen cierpienia krzyk feniksa.</p>
+
+        <p>Na szczycie wieży Madison znalazła ptaka w agonii. Po chwili zwierzę wydało ostatnie tchnienie. Z grymasem obrzydzenia Madison schowała jedno oko do woreczka i wybiegła na zewnątrz.</p>
+
+        <div class="todo-list">
+            <div class="done">[X] Krew ofiary</div>
+            <div class="done">[X] Oko martwego Feniksa</div>
+            <div class="pending">[ ] Krew i ślina jednorożca (Polana Światła)</div>
+            <p style="font-size: 12px; margin-top: 10px;">POZOSTAŁO MAŁO CZASU Z 30 DNI.</p>
+        </div>
+
+        <h3 style="color: #ff77aa; border-top: 1px solid #333; padding-top: 20px; margin-top: 40px;">Tymczasem...</h3>
+        <p>Esteban wrócił do swojej szkolnej rutyny łobuza, ale pod maską krył plan. Ukradł notatki ze szpitala i wiedział, gdzie Madison się uda. Pod osłoną nocy ruszył w stronę puszczy <b>Rehev’sha</b>.</p>
+        
+        <p>Madison, docierając do granicy lasu, czuła, że droga staje się coraz trudniejsza. Nie miała pojęcia, że Esteban już tam jest – czeka w cieniu gigantycznej budowli na jej błąd.</p>
+    </div>
+</div>
+
+<div class="nav-links">
+    <a href="cz2.roz4.html" class="btn">←Poprzedni</a>
+</div>
+
+<div class="back-to-list">
+    <a href="szkola-magii-x.html">Powrót do Spisu Rozdziałów</a>
+</div>
+
+</body>
+</html>

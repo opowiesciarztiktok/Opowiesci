@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Życie zadymiarzy Brawl Stars</title>
+    <style>
+    /* 1. Nagłówek falujący */
+header {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff0055;
+    text-align: center;
+    padding: 25px;
+    animation: wave 2s infinite ease-in-out;
+}
+
+/* 2. Przyciski aktywne */
+.button, .chapter {
+    background: #ff0055;
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 18px;
+    min-width: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+    position: relative;
+}
+
+/* Efekt hover dla aktywnych przycisków */
+.button:hover, .chapter:hover {
+    transform: scale(1.08);
+    background: #ff3388;
+}
+
+/* 3. Przyciski nieaktywne (disabled) */
+.button.disabled, .chapter.disabled {
+    background: #666;
+    pointer-events: none;
+    position: relative;
+}
+
+/* czerwony X dla nieaktywnych przycisków */
+.button.disabled::after, .chapter.disabled::after {
+    content: "✖";
+    color: red;
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    font-size: 16px;
+}
+
+/* 4. Fade-in dla całej strony */
+body {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 5. Animacja falowania nagłówka */
+@keyframes wave {
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.05) rotate(1deg); }
+    50% { transform: scale(1) rotate(0deg); }
+    75% { transform: scale(1.05) rotate(-1deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+    /* Nagłówek falujący */
+header {
+    font-size: 32px; /* lub 34px, 36px w zależności od strony */
+    font-weight: bold;
+    color: #ff0055;
+    text-align: center;
+    padding: 25px;
+    animation: wave 2s infinite ease-in-out;
+}
+
+@keyframes wave {
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.05) rotate(1deg); }
+    50% { transform: scale(1) rotate(0deg); }
+    75% { transform: scale(1.05) rotate(-1deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0b2b;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background: #1a1a44;
+            padding: 25px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .chapters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .chapter {
+            background: #ff0055;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            min-width: 60px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+        }
+
+        .chapter.disabled {
+            background: #666;
+            pointer-events: none;
+        }
+
+        .back {
+            margin-top: 30px;
+        }
+
+        .back a {
+            color: #ff77aa;
+            text-decoration: none;
+            font-size: 16px;
+        }
+/* Animacja fade-in dla całej strony */
+body {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animacja przycisków przy hover */
+.button, .chapter {
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover, .chapter:hover {
+    transform: scale(1.08);
+    background: #ff3388;
+}
+
+/* Nagłówek z delikatnym efektem */
+header {
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+header:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px #ff0055;
+}
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    padding: 12px 18px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #ff0055;
+    color: white;
+    cursor: pointer;
+    display: none; /* domyślnie niewidoczny */
+    z-index: 100;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#backToTop:hover {
+    background: #ff3377;
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+
+<header>Życie zadymiarzy Brawl Stars</header>
+
+<div class="chapters">
+    <!-- Rozdział 1 aktywny -->
+    <a class="chapter" href="shelly.html">Historia Shelly</a>
+    <!-- Rozdział 2 aktywny -->
+    <a class="chapter" href="colt.html"
+    >Historia Colta</a>
+    <!-- Rozdział 3 aktywny -->
+    <a class="chapter" href="edgar.html"
+    >Mroczna noc Edgara</a>
+</div>
+
+<div class="back">
+    <a href="Opowiesciarz.html">← Wróć do wyboru serii</a>
+</div>
+
+<script>
+    // Dodajemy Rozdziały 2-99 jako niedostępne
+    const chaptersDiv = document.querySelector('.chapters');
+    for(let i=2; i<=99; i++){
+        let a = document.createElement('a');
+        a.className = 'chapter disabled';
+        a.textContent = `Rozdział ${i}`;
+        chaptersDiv.appendChild(a);
+    }
+</script>
+<!-- Przycisk Wróć do góry -->
+<button id="backToTop">↑ Wróć do góry</button>
+<script>
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 200){
+        backToTop.style.display = 'block';
+    } else {
+        backToTop.style.display = 'none';
+    }
+});
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({top:0, behavior:'smooth'});
+});
+</script>
+</body>
+</html>

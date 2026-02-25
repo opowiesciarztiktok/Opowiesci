@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła Magii X – Rozdział 2</title>
+    <style>
+        /* --- Baza i Tło --- */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: radial-gradient(circle at top, #1a0033 0%, #05000a 100%);
+            color: #e0e0e0;
+            line-height: 1.8;
+            padding: 0;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        /* Pasek postępu czytania */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff0055, #8a00ff);
+            width: 0%;
+            z-index: 1000;
+            box-shadow: 0 0 10px #ff0055;
+        }
+
+        /* --- Magiczny Nagłówek --- */
+        header {
+            padding: 60px 20px 30px;
+            font-size: clamp(24px, 6vw, 40px);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: center;
+            text-shadow: 0 0 15px #ff0055;
+            color: white;
+            animation: wave 2s infinite ease-in-out;
+        }
+
+        /* --- Kontener Treści --- */
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(138, 0, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            margin-bottom: 50px;
+        }
+
+        /* Inicjał */
+        .content p:first-of-type::first-letter {
+            float: left;
+            font-size: 75px;
+            line-height: 60px;
+            padding-top: 4px;
+            padding-right: 12px;
+            color: #ff0055;
+            text-shadow: 2px 2px 0px #8a00ff;
+        }
+
+        .content {
+            font-size: 20px;
+            text-align: justify;
+        }
+
+        /* --- Styl Dialogów --- */
+        .dialog {
+            margin: 25px auto;
+            padding: 15px 25px;
+            background: rgba(138, 0, 255, 0.05);
+            border-left: 3px solid #ff77aa;
+            color: #ffd6f0;
+            font-style: italic;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* --- Nawigacja --- */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            color: white;
+            background: rgba(138, 0, 255, 0.2);
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: 1px solid #8a00ff;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .nav-btn:hover {
+            background: #ff0055;
+            box-shadow: 0 0 15px #ff0055;
+            transform: translateY(-2px);
+        }
+
+        .back-to-list {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .back-to-list a {
+            color: #ff77aa;
+            text-decoration: none;
+            font-size: 18px;
+            border-bottom: 1px dashed #ff77aa;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.02) rotate(0.5deg); }
+        }
+
+        @media (max-width: 600px) {
+            .story-container { padding: 20px; margin: 10px; }
+            .content { font-size: 18px; }
+        }
+    </style>
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<header>Szkoła Magii X – Rozdział 2</header>
+
+<div class="story-container">
+    <div class="content">
+        <p>Wylądowała na miękkim dywanie w ogromnej sali o ścianach z ciemnego kamienia i świecących kryształach unoszących się pod sufitem. Przed nią stał starszy mężczyzna z monoklem i cylindrem.</p>
+
+        <div class="dialog">
+            „Witaj, Madison. Nazywam się Profesor Caldus. Jestem dyrektorem Szkoły Magii X.”
+        </div>
+
+        <p>Obok niego stała rudowłosa kobieta z zawadiackim uśmiechem – profesorka Zarya, nauczycielka zaklęć bojowych, a zaraz za nią wysoki mężczyzna o błękitnych oczach i pelerynie z płomiennym wzorem – profesor Vael, mistrz iluzji.</p>
+        
+        <p>Kiedy wprowadzono ją do klasy, spotkała pierwszych kolegów:</p>
+        <ul>
+            <li><strong>Nino</strong> – nieśmiałego geniusza od eliksirów.</li>
+            <li><strong>Rivena</strong> – półwampira z zadziwiająco romantycznym charakterem.</li>
+            <li><strong>Leiję</strong> – czarodziejkę kontrolującą pogodę, której humor zmieniał się szybciej niż kierunek wiatru.</li>
+        </ul>
+
+        <p>Ale był też on. <strong>Esteban</strong>.</p>
+
+        <div class="dialog">
+            „Kto, do diabła, znowu zmniejszył promień zakrętu w tej sali?!”
+        </div>
+
+        <p>Madison jeszcze nie wiedziała, że Esteban wciągnie ją w kłopoty większe, niż mogła sobie wyobrazić. Ale już czuła, że nie będzie się tu nudzić...</p>
+    </div>
+</div>
+
+<div class="navigation">
+    <a href="cz1.roz1.html" class="nav-btn">← Poprzedni</a>
+    <a href="cz1.roz3.html" class="nav-btn">Następny →</a>
+</div>
+
+<div class="back-to-list">
+    <a href="szkola-magii-x.html">Powrót do Spisu Rozdziałów</a>
+</div>
+
+<script>
+    window.onscroll = function() {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>

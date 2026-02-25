@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bohaterowie – Szkoła Magii X</title>
+    <style>
+        /* --- Baza i Magiczne Tło --- */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at center, #1a0033 0%, #05000a 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* --- Animowany Nagłówek --- */
+        header {
+            background: rgba(43, 0, 68, 0.6);
+            padding: 40px;
+            font-size: clamp(24px, 8vw, 48px);
+            font-weight: bold;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 20px #ff0055, 0 0 40px #8a00ff;
+            border-bottom: 2px solid #8a00ff;
+            margin-bottom: 40px;
+            animation: floating 3s infinite ease-in-out;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .character-container {
+            max-width: 600px;
+            margin: 0 auto;
+            perspective: 1000px;
+        }
+
+        /* --- Styl Przycisku (Karta) --- */
+        .toggle-button {
+            display: block;
+            width: 100%;
+            margin: 15px 0;
+            background: linear-gradient(90deg, #2b0044, #4a0088);
+            color: #fff;
+            border: 1px solid #8a00ff;
+            padding: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .toggle-button::before {
+            content: "✨";
+            margin-right: 12px;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .toggle-button:hover {
+            transform: scale(1.05) translateZ(20px);
+            background: linear-gradient(90deg, #4a0088, #ff0055);
+            box-shadow: 0 0 25px rgba(255, 0, 85, 0.6);
+        }
+
+        .toggle-button.active {
+            background: #ff0055;
+            border-color: #fff;
+            box-shadow: 0 0 30px #ff0055;
+        }
+
+        /* --- Treść Opisu (Magic Reveal) --- */
+        .toggle-content {
+            display: none;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 0 0 20px 20px;
+            border: 1px solid rgba(138, 0, 255, 0.4);
+            border-top: none;
+            margin-top: -16px;
+            margin-bottom: 25px;
+            color: #f0f0f0;
+            text-align: left;
+            line-height: 1.8;
+            font-size: 16px;
+            animation: magicReveal 0.5s ease-out;
+        }
+
+        @keyframes magicReveal {
+            from { opacity: 0; transform: rotateX(-20deg) translateY(-20px); filter: brightness(2); }
+            to { opacity: 1; transform: rotateX(0) translateY(0); filter: brightness(1); }
+        }
+
+        strong { color: #ff77aa; text-shadow: 0 0 5px rgba(255, 119, 170, 0.5); }
+
+        /* --- Przycisk Powrotu --- */
+        .back { margin-top: 50px; padding-bottom: 40px; }
+        .back a {
+            text-decoration: none;
+            color: #ff77aa;
+            padding: 15px 35px;
+            border-radius: 50px;
+            border: 2px solid #ff77aa;
+            background: rgba(0,0,0,0.3);
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        .back a:hover {
+            background: #ff77aa;
+            color: #000;
+            box-shadow: 0 0 30px #ff77aa;
+        }
+    </style>
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+
+<header>✨ Bohaterowie ✨</header>
+
+<div class="character-container">
+    <button class="toggle-button">Madison Everlyn</button>
+    <div class="toggle-content">
+        <p><strong>Wygląd:</strong> Średniego wzrostu, zielone oczy ze złotymi refleksami, ciemne włosy zaplecione w warkocz.<br>
+        <strong>Charakter:</strong> Odważna, niezależna, z silnym poczuciem sprawiedliwości.<br>
+        <strong>Magia:</strong> Po ataku czarnym pociskiem na jej ramieniu pojawił się mroczny symbol (oko, węże i korona), który zaczyna pulsować własną mocą.</p>
+    </div>
+
+    <button class="toggle-button">Dylan Hawke</button>
+    <div class="toggle-content">
+        <p><strong>Wygląd:</strong> Wysoki, umięśniony, orzechowo-bursztynowe oczy.<br>
+        <strong>Charakter:</strong> Opiekuńczy i odpowiedzialny chłopak Madison.<br>
+        <strong>Magia:</strong> Specjalizuje się w runach i mechanizmach magicznych.</p>
+    </div>
+
+    <button class="toggle-button">Nino Althar</button>
+    <div class="toggle-content">
+        <p><strong>Wygląd:</strong> Srebrzyste oczy, okulary, granatowe szaty.<br>
+        <strong>Charakter:</strong> Nieśmiały geniusz, intelektualista.<br>
+        <strong>Magia:</strong> Mistrz eliksirów i precyzyjnych zaklęć chemiczno-magicznych.</p>
+    </div>
+
+    <button class="toggle-button">Riven Noctalis</button>
+    <div class="toggle-content">
+        <p><strong>Natura:</strong> Półwampir o purpurowych oczach i porcelanowej skórze.<br>
+        <strong>Charakter:</strong> Tajemniczy, romantyczny melancholik.<br>
+        <strong>Magia:</strong> Iluzje i manipulacja energią emocjonalną.</p>
+    </div>
+
+    <button class="toggle-button">Leija Stormveil</button>
+    <div class="toggle-content">
+        <p><strong>Wygląd:</strong> Rude włosy reagujące na jej nastrój.<br>
+        <strong>Charakter:</strong> Zmienna jak pogoda, pełna energii.<br>
+        <strong>Magia:</strong> Czarodziejka pogodowa – kontroluje wiatr, deszcz i burze.</p>
+    </div>
+
+    <button class="toggle-button">Esteban Draven</button>
+    <div class="toggle-content">
+        <p><strong>Wygląd:</strong> Zadziorny uśmiech, opaska na oku, ciemne włosy.<br>
+        <strong>Charakter:</strong> Pewny siebie psotnik, sarkastyczny, ale lojalny kompan.<br>
+        <strong>Magia:</strong> Zaklęcia bojowe i niesamowite akrobacje na miotle.</p>
+    </div>
+
+    <button class="toggle-button">Zarya Flameheart</button>
+    <div class="toggle-content">
+        <p><strong>Rola:</strong> Profesorka zaklęć bojowych.<br>
+        <strong>Wygląd:</strong> Ognisto-rude włosy, zawadiacki uśmiech.<br>
+        <strong>Charakter:</strong> Bezpośrednia i surowa, ale sprawiedliwa nauczycielka.</p>
+    </div>
+
+    <button class="toggle-button">Vael Illusorin</button>
+    <div class="toggle-content">
+        <p><strong>Rola:</strong> Mistrz Iluzji.<br>
+        <strong>Wygląd:</strong> Błękitne oczy, peleryna z płomiennym wzorem.<br>
+        <strong>Charakter:</strong> Spokojny analityk, uwielbia zagadki.</p>
+    </div>
+
+    <button class="toggle-button">Caldus Veyron</button>
+    <div class="toggle-content">
+        <p><strong>Rola:</strong> Dyrektor Szkoły Magii X.<br>
+        <strong>Wygląd:</strong> Stalowo-szare oczy, długa siwa broda.<br>
+        <strong>Magia:</strong> Legendarny mistrz starożytnych run i potężnej magii obronnej.</p>
+    </div>
+</div>
+
+<div class="back-to-list">
+    <a href="szkola-magii-x.html">Powrót do Spisu Rozdziałów</a>
+</div>
+
+<script>
+    const buttons = document.querySelectorAll('.toggle-button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const isActive = button.classList.contains('active');
+
+            // Zamykanie innych
+            buttons.forEach(b => {
+                b.classList.remove('active');
+                b.nextElementSibling.style.display = 'none';
+            });
+
+            // Otwieranie klikniętego
+            if (!isActive) {
+                button.classList.add('active');
+                content.style.display = 'block';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

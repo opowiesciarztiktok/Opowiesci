@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła Magii X – Część 2, Rozdział 3</title>
+    <style>
+        /* --- Mroczna Stylistyka --- */
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: #05000a;
+            color: #d0d0d0;
+            line-height: 1.8;
+            overflow-x: hidden;
+            /* Efekt czarnego atramentu rozlewającego się po ekranie */
+            animation: inkVision 12s infinite alternate;
+        }
+
+        @keyframes inkVision {
+            0% { box-shadow: inset 0 0 100px #000; }
+            50% { box-shadow: inset 0 0 250px #0a001a, inset 0 0 100px #000; }
+            100% { box-shadow: inset 0 0 150px #1a0033; }
+        }
+
+        header {
+            padding: 60px 20px 10px;
+            font-size: clamp(22px, 6vw, 38px);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 25px #8a00ff;
+        }
+
+        .story-wrapper {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 40px;
+            background: rgba(10, 0, 20, 0.9);
+            border: 1px solid rgba(138, 0, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+            position: relative;
+        }
+
+        /* Efekt "Ty jesteś, ja jestem..." */
+        .echo-voice {
+            color: #ff0055;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 30px 0;
+            text-shadow: 0 0 15px #ff0055;
+            font-style: italic;
+            animation: whisper 3s infinite;
+        }
+
+        @keyframes whisper {
+            0%, 100% { opacity: 0.8; transform: scale(1); filter: blur(0px); }
+            50% { opacity: 1; transform: scale(1.05); filter: blur(1px); }
+        }
+
+        /* Sekcja snów - szpony */
+        .dream-vision {
+            background: linear-gradient(to right, transparent, rgba(138, 0, 255, 0.1), transparent);
+            padding: 20px;
+            margin: 25px 0;
+            border-left: 3px solid #8a00ff;
+            color: #b0a0c0;
+        }
+
+        /* Styl dla imion bohaterów */
+        .char-name { font-weight: bold; color: #ff77aa; }
+        .v-name { font-weight: bold; color: #8a00ff; }
+        .e-name { font-weight: bold; color: #ff0055; }
+
+        /* Dialogi */
+        .dialog {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 2px solid rgba(138, 0, 255, 0.5);
+        }
+
+        /* --- Nawigacja --- */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #8a00ff;
+            padding: 12px 25px;
+            background: rgba(138, 0, 255, 0.1);
+            transition: 0.4s;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #8a00ff;
+            box-shadow: 0 0 20px #8a00ff;
+        }
+
+        @media (max-width: 600px) {
+            .story-wrapper { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>Część 2: Rozdział 3</header>
+
+<div class="story-wrapper">
+    <div class="content">
+        <p>Madison ocknęła się w pokoju pielęgniarki. Jej powieki były ciężkie, jakby zasypane kamieniami. Gdy uniosła wzrok, zobaczyła biały pergamin na stoliku obok, a na nim ostrymi literami zapisane trzy słowa:</p>
+        
+        <p style="text-align: center; letter-spacing: 1px;"><i>„Krew ofiary. Sól jednorożca światła. Oko Feniksa.”</i></p>
+
+        <p>Pielęgniarka zauważyła, że Madison odzyskuje przytomność. Spojrzała na nią surowo, ale w oczach krył się cień troski.</p>
+        
+        <div class="dialog">– Powinnaś nie żyć – powiedziała bez zbędnych wstępów. – Tylko dzięki interwencji profesorów udało się powstrzymać… to coś.</div>
+
+        <p>Madison podciągnęła rękaw. Symbol wciąż tam był. Teraz wyglądał na większy – rozchodził się smugami aż w stronę łokcia.</p>
+
+        <p>Drzwi otworzyły się gwałtownie. Do środka wszedł <span class="v-name">Profesor Vael Thalorien</span>. Jego błękitne oczy błyszczały intensywnie.</p>
+        
+        <div class="dialog">– Wystarczy – powiedział tonem nieznoszącym sprzeciwu. – Ona nie powinna wiedzieć zbyt wiele. Jeszcze nie teraz.</div>
+
+        <p>Madison poczuła wściekłość. Chciała krzyknąć, ale wtedy... jej oczy nagle pociemniały. Czerń rozlała się po tęczówkach, jak atrament w wodzie.</p>
+
+        <div class="echo-voice">TY JESTEŚ, JA JESTEM, MY JESTEŚMY…</div>
+
+        <p>Podczas lekcji z <span class="char-name">Profesorką Zaryą</span>, jej ręka sama wypuściła czarną smugę energii, niszcząc tarczę ochronną. Madison nie mogła odpowiedzieć na pytania – w głębi duszy czuła, że jeśli otworzy usta, coś obcego znów przejmie głos.</p>
+
+        <div class="dream-vision">
+            Nocami było gorzej. Czuła, jak stoi pośród ruin. Czarne wieże wbijały się w niebo, a cienie szeptały: <i>„Madison… dołącz.”</i> Wyciągała ręce, a one zmieniały się w długie, cieniste szpony.
+        </div>
+
+        <p><span class="char-name">Nino Calvert</span>, jej przyjaciel od eliksirów, zaczął coś podejrzewać. – Twoja aura jest ciężka, jakbyś nosiła na sobie cień całej wieczności – powiedział poważnie.</p>
+
+        <p>Z kolei <span class="e-name">Esteban Blackthorn</span>, chłopak z opaską na oku, podszedł do niej z uśmiechem: – Może ta moc cię nie niszczy, a buduje? Może jest częścią ciebie?</p>
+
+        <p>Tamtej nocy Madison znów wyszła z pokoju bez świadomości. W sali artefaktów ukazała jej się smukła postać w czarnych szatach.</p>
+
+        <p style="text-align: center;"><i>„Jesteś moja. Każde uderzenie serca przybliża cię do mnie.”</i></p>
+
+        <p>Zanim Madison dotknęła kryształowego berła, wpadli nauczyciele. Bariery magiczne rozbłysły wokół niej. – Madison, walcz! To ty decydujesz, kim jesteś! – krzyknęła Zarya.</p>
+
+        <p>Mrok na chwilę przygasł. Ale gdzieś w głębi usłyszała szept:</p>
+        <p style="text-align: right; font-style: italic;">To dopiero początek…</p>
+    </div>
+</div>
+
+<div class="nav-links">
+    <a href="cz2.roz2.html" class="btn">← Rozdział 2</a>
+    <a href="cz2.roz4.html" class="btn">Rozdział 4 →</a>
+</div>
+
+<div class="back-to-list">
+    <a href="szkola-magii-x.html">Powrót do Spisu Rozdziałów</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła Magii X – Część 3, Rozdział 1</title>
+    <style>
+        /* --- Podziemna Puszcza i Labirynt --- */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #02050a;
+            color: #b0c4de;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Efekt błękitnego pulsowania run */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 191, 255, 0.05), transparent);
+            pointer-events: none;
+            z-index: -1;
+            animation: pulseRunes 4s infinite alternate;
+        }
+
+        @keyframes pulseRunes {
+            from { opacity: 0.3; }
+            to { opacity: 1; }
+        }
+
+        header {
+            padding: 60px 20px 10px;
+            font-size: clamp(22px, 6vw, 38px);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-align: center;
+            color: #00bfff;
+            text-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
+        }
+
+        .story-wrapper {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 40px;
+            background: rgba(10, 20, 30, 0.9);
+            border: 1px solid rgba(0, 191, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Sekcja Labiryntu */
+        .labyrinth-note {
+            border-left: 3px solid #00bfff;
+            padding: 20px;
+            margin: 30px 0;
+            background: rgba(0, 191, 255, 0.05);
+            font-style: italic;
+        }
+
+        /* Efekt Zderzenia */
+        .collision {
+            background: #fff;
+            color: #000;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin: 40px 0;
+            box-shadow: 0 0 30px #fff;
+            animation: impact 0.3s ease-out;
+        }
+
+        @keyframes impact {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .char-esteban { color: #ff0055; font-weight: bold; }
+        .char-madison { color: #00bfff; font-weight: bold; }
+
+        /* --- Nawigacja --- */
+        .nav-links { text-align: center; margin-bottom: 50px; }
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #00bfff;
+            padding: 12px 25px;
+            background: rgba(0, 191, 255, 0.1);
+            transition: 0.4s;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #00bfff;
+            color: #000;
+            box-shadow: 0 0 20px #00bfff;
+        }
+    </style>
+</head>
+<body>
+
+<header>Część 3: Rozdział 1</header>
+
+<div class="story-wrapper">
+    <div class="content">
+        <p>Puszcza <b>Rehev’sha</b> nie przypominała niczego, co Madison widziała do tej pory. Roślinność była tu tak gęsta, że światło dzienne niemal nie docierało do runa leśnego. Po godzinach walki z pnączami las nagle ustąpił, odsłaniając <b>Polanę Światła Jednorożca</b>.</p>
+        
+        <p>Na jej samym środku wyrastała monumentalna, kamienna budowla. Nie pięła się jednak w górę – ta konstrukcja wbijała się głęboko w ziemię, przypominając gigantyczny, schodkowy krater.</p>
+
+        <p>Madison schodziła po wilgotnych stopniach, gotowa w każdej chwili splotować zaklęcie. Na samym dnie krateru ziały otwory prowadzące do skomplikowanego systemu korytarzy. Ściany były pokryte wyblakłymi runami <b>Pierwszego Pola Nadania Mocy</b>, które pulsowały słabym, błękitnym światłem.</p>
+
+        <div class="labyrinth-note">
+            Madison krążyła po korytarzach, ale ściany wydawały się przesuwać. Każde przejście znikało za jej plecami. Labirynt nie pozwalał jej wyjść.
+        </div>
+
+        <p>Narastała w niej frustracja. Przyspieszała, niemal biegnąc przez kolejną prostą galerię, byle tylko uciec przed duszącą atmosferą podziemi.</p>
+
+        <div class="collision">BUM!</div>
+
+        <p>Zirytowany własną bezsilnością chłopak gwałtownie skręcił za róg. Nie patrząc przed siebie, oboje z impetem wpadli na kogoś, kto nadbiegał z naprzeciwka.</p>
+
+        <p><span class="char-madison">Madison</span> odskoczyła, gotowa do uderzenia zaklęciem, ale jej dłoń zamarła w połowie gestu. Przed nią, dysząc ciężko, stał chłopak, którego ostatni raz widziała na szkolnym korytarzu.</p>
+
+        <p>– <span class="char-esteban">Esteban?</span> – wykrztusiła z niedowierzaniem. – Co ty tutaj, do diabła, robisz?</p>
+
+        <p><span class="char-esteban">Esteban</span> tylko uśmiechnął się krzywo. I milczał…</p>
+    </div>
+</div>
+
+<div class="nav-links">
+    <a href="cz3.roz2.html" class="btn">Następny →</a>
+</div>
+
+<div class="back-to-list">
+    <a href="szkola-magii-x.html">Powrót do Spisu Rozdziałów</a>
+
+</body>
+</html>

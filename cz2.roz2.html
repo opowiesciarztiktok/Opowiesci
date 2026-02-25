@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła Magii X – Część 2, Rozdział 2</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background: #020005;
+            color: #ccc;
+            line-height: 1.8;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Animacja pulsującego mroku wzmocniona */
+        @keyframes shadowPulse {
+            0% { box-shadow: inset 0 0 100px #000; }
+            50% { box-shadow: inset 0 0 200px #0a0015; }
+            100% { box-shadow: inset 0 0 100px #000; }
+        }
+        body { animation: shadowPulse 10s infinite ease-in-out; }
+
+        header {
+            padding: 60px 20px 10px;
+            font-size: clamp(22px, 6vw, 38px);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 20px #ff0055;
+        }
+
+        .shadow-meter {
+            text-align: center;
+            font-size: 14px;
+            color: #ff0055;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .story-wrapper {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 40px;
+            background: rgba(5, 0, 10, 0.9);
+            border: 1px solid rgba(255, 0, 85, 0.2);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+            position: relative;
+        }
+
+        /* Efekt kartki, która wraca */
+        .cursed-note {
+            background: #111;
+            color: #eee;
+            padding: 25px;
+            border: 1px solid #333;
+            margin: 30px 0;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            position: relative;
+            transform: rotate(-1deg);
+        }
+
+        .cursed-note b { color: #fff; text-shadow: 0 0 5px #fff; }
+
+        /* Efekt ciszy */
+        .silence-zone {
+            font-style: italic;
+            color: #666;
+            text-align: center;
+            margin: 40px 0;
+            letter-spacing: 5px;
+            transition: 0.5s;
+        }
+
+        /* Lista składników */
+        .ingredient-list {
+            background: rgba(255, 0, 85, 0.05);
+            border: 2px solid #ff0055;
+            padding: 25px;
+            margin-top: 50px;
+            font-family: 'Courier New', monospace;
+            border-radius: 10px;
+        }
+
+        .ingredient-list h3 { color: #ff0055; margin-top: 0; }
+        .checkbox { color: #ff0055; margin-right: 10px; }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #ff0055;
+            padding: 12px 25px;
+            background: rgba(255, 0, 85, 0.1);
+            transition: 0.4s;
+            margin: 10px;
+        }
+
+        .btn:hover { background: #ff0055; box-shadow: 0 0 20px #ff0055; }
+
+        .nav-links { text-align: center; margin-bottom: 50px; }
+    </style>
+    <link rel="manifest" href="manifest.json">
+
+</head>
+<body>
+
+<header>Część 2: Rozdział 2</header>
+
+<div class="story-wrapper">
+    <div class="content">
+        <p>Po powrocie do dormitorium każdy cień, każda ściana, której nie dosięgało światło, budziły w Madison lęk. Myśli krążyły nieustannie wokół tamtego ataku… wokół znaku, który pojawił się na jej ramieniu. Wciąż zadawała sobie pytanie: jak to się wszystko zaczęło?</p>
+        
+        <p>Czasem, gdy zapadała ciemność, czuła dziwną obecność – moc, która wydawała się czyhać tuż poza granicą świadomości. Od momentu, gdy trafił ją czarny pocisk, minęło już 17 dni. Siedemnaście długich, niepokojących dni.</p>
+
+        <p>Coraz częściej traciła nad sobą kontrolę. Pewnego dnia ocknęła się w komnacie z relikwiami, trzymając w dłoni jeden z najcenniejszych artefaktów szkoły – niepozorny kijek, na którego szczycie lewitował złoty znak „X”. Gdy tylko to zauważyła, natychmiast upuściła przedmiot i wybiegła w popłochu.</p>
+
+        <p>Wpada do swojego pokoju, zatrzasnęła za sobą drzwi. I wtedy ją zobaczyła – kartkę. Ciemną, niemal czarną, z białym napisem:</p>
+
+        <div class="cursed-note">
+            <b>TY JESTEŚ, JA JESTEM, MY JESTEŚMY</b><br>
+            <small style="font-size: 10px; opacity: 0.5;">Szkoła Magii Xxx. Nie X. Xxx.</small>
+        </div>
+
+        <p>Chciała ją wyrzucić przez okno. Ale kartka wróciła. Wrzuciła ją do kosza – znów się pojawiła. Podarła ją – nic. Cisza. A potem głos. Niski, bezosobowy, jakby nie należał do nikogo:</p>
+        
+        <p style="text-align: center; color: #ff0055;"><i>„Podarłaś ważną rzecz. Twoja kara jest…”</i></p>
+
+        <div class="silence-zone">
+            ... CISZA ...
+        </div>
+
+        <p>Zbyt głęboka. Madison czekała, nasłuchiwała, ale nic więcej nie usłyszała. Minęło pięć godzin. Zaczęła czuć się dziwnie. Spojrzała przez okno. Ptaki – milczały. Na dziedzińcu szop pracował w śmietniku – ale nie wydawał żadnego dźwięku.</p>
+
+        <p>Dopiero wtedy zrozumiała. Jej karą był brak dźwięków. Odebrano jej coś, co do tej pory uznawała za oczywiste. Wybiegła z pokoju. I wtedy wszystko wróciło – ale z podwójną siłą. Hałas, rozmowy, szelesty, dźwięki magicznych urządzeń. Wszystko naraz, jakby świat próbował nadrobić stracony czas.</p>
+
+        <p>Zanim zdążyła zareagować, oczy Madison pociemniały. Całkowicie. Znak znów przejął nad nią kontrolę. Jej ciało poruszało się mechanicznie, bez udziału jej woli. Kroki prowadziły ją do sali artefaktów. Tam, w rogu komnaty, dostrzegła niewielką szybę, otoczoną polem siłowym.</p>
+
+        <p>Potem – ciemność. Straciła przytomność. Jej ciało nadal się poruszało. Co robiła? Nie wiedziała. Nie była już sobą.</p>
+
+        <div class="ingredient-list">
+            <h3>Wymagane do rytuału:</h3>
+            <div><span class="checkbox">☐</span> Krew ofiary</div>
+            <div><span class="checkbox">☐</span> Krew śliny jednorożca światła</div>
+            <div><span class="checkbox">☐</span> Oko martwego Feniksa</div>
+            <div style="margin-top: 15px; font-weight: bold; color: #fff;">POZOSTAŁO: DO 30 DNI OD OPĘTANIA</div>
+        </div>
+    </div>
+</div>
+
+<div class="nav-links">
+    <a href="cz2.roz1.html" class="btn">← Poprzedni</a>
+    <a href="cz2.roz3.html" class="btn">Następny →</a>
+</div>
+
+<div class="back-to-list">
+    <a href="szkola-magii-x.html">Powrót do Spisu Rozdziałów</a>
+</div>
+
+</body>
+</html>

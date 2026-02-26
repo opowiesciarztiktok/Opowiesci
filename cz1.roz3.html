@@ -80,6 +80,38 @@
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.03); }
         }
+                .navigation-buttons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding-bottom: 50px;
+        }
+
+        .nav-btn {
+            background: rgba(255, 119, 170, 0.1);
+            color: #ff77aa;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid #ff77aa;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s;
+            flex: 1; /* Przyciski będą równej szerokości */
+            max-width: 120px;
+        }
+
+        .nav-btn:hover {
+            background: #ff77aa;
+            color: #120022;
+        }
+
+        .menu-btn {
+            background: rgba(138, 0, 255, 0.1);
+            border-color: #8a00ff;
+            color: #bd6eff;
+        }
+        
     </style>
 </head>
 <body>
@@ -102,9 +134,12 @@
     <p>Madison odpowiedziała tylko chłodnym spojrzeniem. Czuła, że ten koleś będzie ją albo doprowadzał do szaleństwa… albo wciągnie w coś, co zmieni jej życie...</p>
 </div>
 
-<div class="back">
-    <a href="szkola-magii-x.html">Powrót do Spisu Rozdziałów</a>
+<div class="navigation-buttons">
+    <a href="cz1.roz2.html" class="nav-btn">← Poprzedni</a>
+    <a href="szkola-magii-x.html" class="nav-btn menu-btn">Spis treści</a>
+    <a href="cz1.roz4.html" class="nav-btn">Następny →</a>
 </div>
+    
 
 </body>
 </html>

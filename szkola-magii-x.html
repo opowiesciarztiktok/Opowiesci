@@ -228,6 +228,24 @@
         });
     });
 </script>
-
+<div style="max-width: 600px; margin: 50px auto; padding: 20px; background: rgba(138, 0, 255, 0.1); border: 1px solid #8a00ff; border-radius: 15px; text-align: center;">
+    <h3 style="color: #ff77aa; text-transform: uppercase; letter-spacing: 2px;">Zainspiruj autora</h3>
+    <p style="color: #ccc; font-size: 14px;">Masz pomysł na kolejny zwrot akcji? Napisz, co chciałbyś, aby spotkało Madison i Estebana!</p>
+    
+    <form action="https://formspree.io/f/TWOJ_UNIKALNY_KOD" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+        <input type="text" name="name" placeholder="Twoje imię/pseudonim" required 
+               style="padding: 10px; background: #000; border: 1px solid #8a00ff; color: white; border-radius: 5px;">
+        
+        <textarea name="message" placeholder="Twoja propozycja fabuły..." required rows="4"
+                  style="padding: 10px; background: #000; border: 1px solid #8a00ff; color: white; border-radius: 5px; resize: none;"></textarea>
+        
+        <button type="submit" 
+                style="padding: 12px; background: #8a00ff; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;">
+            WYŚLIJ MAGICZNĄ WIADOMOŚĆ
+        </button>
+    </form>
+</div>
+    
+    
 </body>
 </html>

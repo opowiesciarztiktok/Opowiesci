@@ -1,0 +1,21 @@
+{
+  "short_name": "Opowieściarz",
+  "name": "Opowieściarz - Szkoła Magii X",
+  "icons": [
+    {
+      "src": "ikona.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "ikona-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#02050a",
+  "theme_color": "#8a00ff",
+  "display": "standalone",
+  "orientation": "portrait"
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wielkanocny Chaos - Szkoła Magii X</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0510;
+            /* Wielkanocny miks: fiolet + pastelowy róż + mroczna czerń */
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(138, 0, 255, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(255, 182, 193, 0.1) 0%, transparent 40%);
+            color: #f0f0f0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            background: rgba(20, 0, 40, 0.9);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #ff77aa;
+            box-shadow: 0 5px 20px rgba(255, 119, 170, 0.2);
+        }
+
+        .special-tag {
+            background: #ff0055;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #ffb6c1;
+            text-shadow: 0 0 15px #ff77aa;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .story-container {
+            max-width: 600px;
+            width: 90%;
+            margin: 40px 0;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 119, 170, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .scene {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(138, 0, 255, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .scene:last-child { border: none; }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .dialogue {
+            color: #e0b0ff;
+            font-style: italic;
+            border-left: 3px solid #ff77aa;
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            color: #ffb6c1;
+            font-weight: bold;
+        }
+
+        .footer-nav {
+            margin-bottom: 50px;
+        }
+
+        .btn-back {
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #8a00ff, #ff77aa);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(138, 0, 255, 0.4);
+        }
+
+        .btn-back:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(255, 119, 170, 0.6);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="special-tag">Wydarzenie Specjalne</div>
+        <h1>Wielkanocny Chaos</h1>
+    </header>
+
+    <div class="story-container">
+        
+        <div class="scene">
+            <p>W Szkole Magii X ogłoszono <span class="highlight">Wielkie Polowanie na Pisanki</span>.</p>
+            <p>Dyrektor Caldus wraz z Prof. Zaryą i Prof. Vaelem przygotowali 70 magicznych jajek ukrytych w całym kampusie.</p>
+            <p>Każde z nich miało losowy efekt — pomocny albo… bardzo dziwny.</p>
+        </div>
+
+        <div class="scene">
+            <div class="dialogue">— Brzmi jak chaos.</div>
+            <p>Madison skrzyżowała ręce. Esteban uśmiechnął się lekko.</p>
+            <div class="dialogue">— Brzmi jak coś, co wygram.</div>
+            <div class="dialogue">— Jasne. Już to widzę — odpowiedziała.</div>
+        </div>
+
+        <div class="scene">
+            <p>Uczniowie rozbiegli się po salach i korytarzach. <span class="highlight">Dylan i Nino</span> działali szybko, choć trochę chaotycznie. <span class="highlight">Riven i Leija</span> stawiali na strategię i dokładność.</p>
+        </div>
+
+        <div class="scene">
+            <p>Madison znalazła pisankę jako pierwsza. Rozbiła ją bez wahania. Efekt uderzył w Estebana — <span class="highlight">zaczął mówić od tyłu</span>.</p>
+            <p>Madison wybuchnęła śmiechem.</p>
+            <div class="dialogue">— Okej, to jest najlepsze, co dziś zobaczę.</div>
+        </div>
+
+        <div class="scene">
+            <p>Chwilę później Esteban podał Madison kolejną pisankę.</p>
+            <div class="dialogue">— Rozbij, jeśli się nie boisz.</div>
+            <div class="dialogue">— Nie boję się — odpowiedziała i zrobiła to od razu.</div>
+            <p>Na jej głowie pojawiły się <span class="highlight">ogromne królicze uszy</span>. Dylan nie wytrzymał śmiechu.</p>
+        </div>
+
+        <div class="scene">
+            <p>Na polu bitew magii sytuacja zrobiła się trudniejsza.</p>
+            <div class="dialogue">— Masz jakiś plan? — zapytała Madison.</div>
+            <div class="dialogue">— Tak. Ty nie przeszkadzasz — odpowiedział Esteban.</div>
+            <div class="dialogue">— Świetny plan. Naprawdę błyskotliwy.</div>
+        </div>
+
+        <div class="scene">
+            <p>Mimo ciągłych docinek zaczęli działać razem. Madison zamroziła teren, Esteban naprowadził pisankę w pułapkę. Udało się.</p>
+            <div class="dialogue">— Dobra robota — powiedział.</div>
+            <p>Madison spojrzała na niego podejrzliwie.</p>
+            <div class="dialogue">— Zapamiętam, że to powiedziałeś.</div>
+        </div>
+
+        <div class="scene">
+            <p>Na jednej z latających wysp panowała dziwna cisza.</p>
+            <div class="dialogue">— To mi się nie podoba — powiedziała Madison.</div>
+            <div class="dialogue">— Bo nie masz nad tym kontroli? — rzucił Esteban.</div>
+            <p>Sekundę później pojawiły się pierwsze króliki. <span class="highlight">Króliki zaczęły pojawiać się bez końca.</span></p>
+            <p>Rzucały wybuchającymi jajkami i wpadały na wszystkich, siejąc chaos.</p>
+        </div>
+
+        <div class="scene">
+            <div class="dialogue">— ONE SIĘ RESPIĄ! — krzyknął Nino.</div>
+            <div class="dialogue">— Kto to w ogóle wymyślił?! — dodał Dylan.</div>
+            <div class="dialogue">— Osłaniaj mnie! — krzyknął Esteban.</div>
+            <div class="dialogue">— Czemu ja?!</div>
+            <div class="dialogue">— Bo jesteś najbliżej!</div>
+        </div>
+
+        <div class="scene">
+            <p>Madison przewróciła oczami, ale stworzyła barierę. Esteban dopadł pisanki i rozbił ją. Króliki zniknęły natychmiast.</p>
+            <p>Z pisanki pojawił się <span class="highlight">medalion</span>.</p>
+            <div class="dialogue">— Wzmacnia magię… ale tylko przy współpracy — powiedziała Madison.</div>
+            <div class="dialogue">— Czyli dla ciebie bezużyteczne — dodała.</div>
+            <div class="dialogue">— Czyli dla nas idealne — odpowiedział Esteban.</div>
+            <div class="dialogue">— Nie przyzwyczajaj się.</div>
+            <div class="dialogue">— Za późno.</div>
+        </div>
+
+        <div class="scene">
+            <p>Z daleka profesorowie obserwowali uczniów.</p>
+            <div class="dialogue">— Nauczyli się współpracy — powiedziała Zarya.</div>
+            <div class="dialogue">— Nawet jeśli przy okazji się kłócili — dodał Vael.</div>
+            <p>Dyrektor Caldus uśmiechnął się lekko.</p>
+        </div>
+
+    </div>
+
+    <div class="footer-nav">
+        <a href="szkola-magii-x.html" class="btn-back"> Powrót do spisu części</a>
+    </div>
+
+</body>
+          </html>
+          

@@ -39,6 +39,24 @@
             to { opacity: 1; transform: translateY(0); filter: blur(0); }
         }
 
+        /* --- NOWOŚĆ PULSOWANIE --- */
+        .new-badge {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 5px;
+            animation: pulseRed 1.5s infinite;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+        }
+
+        @keyframes pulseRed {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
         /* --- Przycisk Bohaterowie --- */
         .hero-button-container { margin-bottom: 50px; }
         .hero-button {
@@ -125,7 +143,7 @@
             border: 1px solid rgba(255, 0, 85, 0.3);
             transition: 0.3s;
             font-weight: 500;
-            position: relative; /* Ważne dla pozycjonowania napisu Wkrótce */
+            position: relative;
         }
 
         .chapter-link:hover {
@@ -134,13 +152,12 @@
             box-shadow: 0 5px 15px rgba(255, 0, 85, 0.4);
         }
 
-        /* --- Blokada ROZDZIAŁÓW (Wkrótce) --- */
         .chapter-link.locked {
             opacity: 0.5;
             cursor: not-allowed;
             pointer-events: none;
             border-style: dashed;
-            padding-bottom: 25px; /* Miejsce na napis */
+            padding-bottom: 25px;
         }
 
         .chapter-link.locked::after {
@@ -155,7 +172,6 @@
             font-weight: bold;
         }
 
-        /* --- Zablokowane CAŁE CZĘŚCI --- */
         .part-item.disabled { opacity: 0.5; filter: grayscale(0.8); }
         .part-item.disabled .part-header::after { content: '🔒'; font-size: 18px; }
 
@@ -175,6 +191,19 @@
 </div>
 
 <div class="parts-container">
+    
+    <div class="part-item" style="animation-delay: 0.1s; border: 1px solid #ff0000;">
+        <div class="part-header">
+            <div>
+                <span class="new-badge">Nowość!</span>
+                Dodatkowe
+            </div>
+        </div>
+        <div class="chapter-list">
+            <a href="wielkanoc.html" class="chapter-link">Wielkanocny Chaos</a>
+        </div>
+    </div>
+
     <div class="part-item" style="animation-delay: 0.2s;">
         <div class="part-header">Część 1</div>
         <div class="chapter-list">
@@ -228,6 +257,7 @@
         });
     });
 </script>
+
 <div style="max-width: 600px; margin: 50px auto; padding: 20px; background: rgba(138, 0, 255, 0.1); border: 1px solid #8a00ff; border-radius: 15px; text-align: center;">
     <h3 style="color: #ff77aa; text-transform: uppercase; letter-spacing: 2px;">Zainspiruj autora</h3>
     <p style="color: #ccc; font-size: 14px;">Masz pomysł na kolejny zwrot akcji? Napisz, co chciałbyś, aby spotkało Madison i Estebana!</p>
@@ -245,7 +275,6 @@
         </button>
     </form>
 </div>
-    
     
 </body>
 </html>

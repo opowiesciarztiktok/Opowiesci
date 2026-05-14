@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Część 3, Rozdział 3 - Szkoła Magii X</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #05000a;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(138, 0, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 40%);
+            color: #f0f0f0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            background: rgba(20, 0, 40, 0.9);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #8a00ff;
+            box-shadow: 0 5px 20px rgba(138, 0, 255, 0.2);
+            box-sizing: border-box;
+        }
+
+        .special-tag {
+            background: #8a00ff;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(24px, 6vw, 32px);
+            color: #e0b0ff;
+            text-shadow: 0 0 15px #8a00ff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .story-container {
+            max-width: 600px;
+            width: 90%;
+            margin: 40px 0;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 25px;
+            border: 1px solid rgba(138, 0, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+        }
+
+        .scene {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(138, 0, 255, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .scene:last-child { border: none; margin-bottom: 0; padding-bottom: 0; }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .dialogue {
+            color: #e0b0ff;
+            font-style: italic;
+            border-left: 3px solid #8a00ff;
+            padding-left: 15px;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            color: #ff0055;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 0, 85, 0.4);
+        }
+        
+        .magic {
+            color: #00d4ff;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+        }
+
+        .footer-nav {
+            margin-bottom: 50px;
+        }
+
+        .btn-back {
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #8a00ff, #00d4ff);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(138, 0, 255, 0.4);
+            display: inline-block;
+        }
+
+        .btn-back:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.6);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="special-tag">Część 3</div>
+        <h1>Rozdział 3: Iluzja za iluzją</h1>
+    </header>
+
+    <div class="story-container">
+        
+        <div class="scene">
+            <p>Madison zignorowała docinki chłopaka i zaczęła nerwowo przetrząsać swoją torbę. Wyciągała z niej przedmioty, które sprawiały, że brew Estebana wędrowała coraz wyżej. Najpierw na wierzchu wylądowało <span class="highlight">oko martwego feniksa</span>. Chłopak wzdrygnął się wyraźnie, cofając o krok.</p>
+            <div class="dialogue">— No oczywiście, że taka, co się wzięła znikąd, trupy ze sobą nosi — mruknął pod nosem, ale w jego głosie słychać było autentyczne obrzydzenie.</div>
+        </div>
+
+        <div class="scene">
+            <p>Zaraz po oku Madison wyłowiła spleśniałą kanapkę sprzed tygodnia, którą szybko odłożyła na bok, aż w końcu jej palce zacisnęły się na małym, <span class="magic">fioletowym kamieniu</span>.</p>
+            <p>Esteban od razu go zauważył.</p>
+            <div class="dialogue">— Mogę? — zapytał, ale nie czekał na odpowiedź.</div>
+            <p>Po prostu wyrwał go z ręki Madison, zanim zdążyła zaprotestować. Zanim zdążyła go powstrzymać, Esteban z całej siły cisnął kamieniem o ścianę.</p>
+            <div class="dialogue">— CO TY ROBISZ?! — wrzasnęła, pewna, że zaraz sufit zawali im się na głowy.</div>
+        </div>
+
+        <div class="scene">
+            <div class="dialogue">— Słyszałem o nich na lekcjach zakazanych artefaktów. Podobno przy odpowiednim uderzeniu mogą wyeliminować każdą magię, która nie pochodzi od ludzi, w promieniu tysiąca kilometrów! — odkrzyknął, osłaniając twarz przed odłamkami.</div>
+            <div class="dialogue">— Ale to nawet niemożliwe nie...</div>
+        </div>
+
+        <div class="scene">
+            <p>Madison urwała. Gdy siwy dym po wybuchu powoli opadł, okazało się, że <span class="magic">iluzoryczne ściany labiryntu po prostu wyparowały</span>. Tam, gdzie przed chwilą był ślepy zaułek, teraz ukazały się szerokie schody prowadzące stromo w górę. Oboje, nie marnując ani sekundy, ruszyli stopniami, które wyprowadziły ich prosto na zewnątrz.</p>
+        </div>
+
+        <div class="scene">
+            <p>Znaleźli się na Polanie Światła, ale krajobraz wyglądał jak z koszmaru. Tuż obok nich stała wielka statua jednorożca – tak samo ogromna jak ta, którą Madison minęła przed wejściem do podziemi. Jednak coś było nie tak.</p>
+            <p>Trawa pod ich stopami momentalnie stała się <span class="highlight">czarna i lepka</span>, a niebo przybrało barwę brudnej stali. W oddali huczały gromy, a pioruny z coraz większą częstotliwością uderzały w ziemię dookoła nich.</p>
+        </div>
+
+        <div class="scene">
+            <p>Nagle posąg jednorożca drgnął. Kamienna głowa obróciła się w ich stronę z przeraźliwym zgrzytem. Madison podskoczyła gwałtownie, gotowa do rzucenia najsilniejszego zaklęcia jakie znała, ale Esteban zamiast walczyć...</p>
+            <p>...po prostu ryknął ze śmiechu. Podbiegł do bestii, zanim ta zdążyła w pełni ożyć, i <span class="highlight">jednym silnym szarpnięciem urwał jednorożcowi ogon</span>.</p>
+        </div>
+
+        <div class="scene">
+            <p>W tej samej sekundzie cały teren wrócił do normalności. Czarna trawa w mgnieniu oka zazieleniała, burzowe chmury rozpłynęły się, jakby nigdy ich nie było, a nad polaną rozbłysła idealnie czysta tęcza.</p>
+            <div class="dialogue">— Iluzja za iluzją — zaśmiał się Esteban, wymachując kamiennym ogonem przed nosem oszołomionej Madison. — Szkoła Magii X uczy wielu rzeczy, ale spostrzegawczość to u ciebie leży, Mad.</div>
+        </div>
+
+    </div>
+
+    <div class="footer-nav">
+        <a href="szkola-magii-x.html" class="btn-back">← Powrót do spisu części</a>
+    </div>
+
+</body>
+      </html>
+  
